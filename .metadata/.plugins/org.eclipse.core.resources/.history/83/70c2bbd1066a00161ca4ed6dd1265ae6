@@ -1,4 +1,4 @@
-public function createOrder()
+function createOrder()
 {
 	// waarde van inputveld met id lastName opvragen
 	//console.log($("#lastName").val());
@@ -8,17 +8,17 @@ public function createOrder()
 	var tableNumber = $("#tableNumber").val();
 	var comments = $("#comments").val();
 	var orderTime = $("#orderTime").val();
-		
+	
 	// leeg JSON document
 	var order = {};
-		
+	
 	order.course = course;
 	order.quantity = parseInt(quantity);
 	order.tableNumber = tableNumber;
 	order.comments = comments;
 	order.orderTime = parseDate(orderTime);
 	var json = JSON.stringify(order);
-		
+	
 	$.ajax({
 		// enige manier om document naam te kunnen geven. Post maakt zelf namen
 		type: 			'PUT',
@@ -36,5 +36,4 @@ public function createOrder()
 							console.log(errorThrown);
 						}
 	});
-	
 }

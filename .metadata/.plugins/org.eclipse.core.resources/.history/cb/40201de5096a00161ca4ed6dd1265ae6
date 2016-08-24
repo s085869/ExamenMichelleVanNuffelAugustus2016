@@ -2,6 +2,7 @@
  <html>
   <head>
     <title>Bestelling</title>
+    <meta http-equiv='Content-Type' content='text/html'; charset='utf-8'/>
     <link rel='stylesheet' href='style/bootstrap.min.css' type='text/css'>
    </head>
   <body>

@@ -1,4 +1,4 @@
-public function createOrder()
+function createOrder()
 {
 	// waarde van inputveld met id lastName opvragen
 	//console.log($("#lastName").val());
