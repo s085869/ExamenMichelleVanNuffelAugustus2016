@@ -21,7 +21,7 @@ function createOrder()
 	
 	$.ajax({
 		// enige manier om document naam te kunnen geven. Post maakt zelf namen
-		type: 			'POST',
+		type: 			'PUT',
 		// ../../ = 2 niveaus omhoog
 		url: 			'../../' + tableNumber + course,
 		data: 			json,
@@ -29,11 +29,7 @@ function createOrder()
 		async: 			true,
 		success: 		function(data)
 						{
-							$("#course").val('');
-							$("#quantity").val('');
-							$("#tableNumber").val('');
-							$("#comments").val('');
-							$("#orderTime").val('');
+							alert("success");
 						},
 		error: 			function(XMLHttpRequest, textStatus, errorThrown)
 						{
