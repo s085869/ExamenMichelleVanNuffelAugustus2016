@@ -1,0 +1,40 @@
+function createDoc()
+{
+	// waarde van inputveld met id lastName opvragen
+	//console.log($("#lastName").val());
+	
+	var lastName = $("#lastName").val();
+	var firstName = $("#firstName").val();
+	var points = $("#points").val();
+	
+	// leeg JSON document
+	var doc = {};
+	
+	doc.lastName = lastName;
+	doc.firstName = firstName;
+	doc.points = parseInt(points);
+	var json = JSON.stringify(doc);
+	
+	$.ajax({
+		// enige manier om document naam te kunnen geven. Post maakt zelf namen
+		type: 			'PUT',
+		// ../../ = 2 niveaus omhoog
+		url: 			'../../' + lastName + firstName,
+		data: 			json,
+		contentType: 	'application/json',
+		async: 			true,
+		success: 		function(data)
+						{
+							$("#lastName").val('');
+							$("#firstName").val('');
+							$("#points").val('');
+							$("#students").val('');
+							
+							fillTypeAhead();
+						},
+		error: 			function(XMLHttpRequest, textStatus, errorThrown)
+						{
+							console.log(errorThrown);
+						}
+	});
+}

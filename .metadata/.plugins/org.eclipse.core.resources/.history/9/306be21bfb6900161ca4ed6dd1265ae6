@@ -43,11 +43,17 @@
                 </td>
             </tr>
         </table>
+        <br/>
+        <div id='output'></div>
+        <div id='edit'></div>
+        <div id='search'>
+            <input type='text' id='students' class='typeahead' placeholder='Student' />
+            <button type='button' class='btn btn-success' onClick='searchDoc()'>Zoeken</button>
+        </div>
   </div>
   </body>
-  <footer>
     <script src='scripts/jquery-2.1.4.min.js'></script>
-    <script src='scripts/bootstrap.min.js'></script>
     <script src='scripts/main.js'></script>
-  </footer>
+    <script src='scripts/bootstrap.min.js'></script>
+    <script src='scripts/typeahead.bundle.js'></script>
 </html>
