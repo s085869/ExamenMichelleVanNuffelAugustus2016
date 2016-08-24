@@ -1,0 +1,11 @@
+#Wed Aug 24 14:10:07 CEST 2016
+vl=How many times the 'Finish' button pressed during the day
+l=Wizard class name
+ct=jbt
+d=1472040607118
+c=0
+cmp=usage
+a=finishWizard
+cl=com.pittypanda.plugins.couch.CouchWizard
+v=2.1.0
+s=2
