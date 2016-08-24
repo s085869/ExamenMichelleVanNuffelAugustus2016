@@ -19,6 +19,6 @@ class Recipe < ActiveRecord::Base
   end
 
   def addIngredient
-    
+
   end
 end
